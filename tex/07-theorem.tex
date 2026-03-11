@@ -1,0 +1,115 @@
+\section{Main theorem: Gram rigidity}
+  \label{sec:theorem}
+
+  \begin{theorem}[Gram rigidity of neutral generators]
+    \label{thm:gram-rigidity}
+    Let $G$ be a finite group, $S = S^{-1} \subset G$ a symmetric generating set, and
+    $\rho\colon G \to \SU(2)$ an irreducible two-dimensional representation satisfying
+    $\chi_\rho(s) = 0$ for all $s \in S$.
+    Define
+    \[
+      M \;:=\; \sum_{s \in S^+} \vec{u}_s\,\vec{u}_s^{\,T},
+      \qquad
+      G_{st} \;:=\; -\tfrac{1}{2}\,\chi_\rho(st) \;=\; \vec{u}_s \cdot \vec{u}_t.
+    \]
+    Then exactly one of the following cases holds.
+    \begin{enumerate}
+      \item[\emph{(i)}] $M \not\propto I$:
+      then $\rhobar(G) \cong D_n$ for some $n \ge 3$, i.e.\ $\rho(G) \cong \mathrm{Dic}_n$.
+
+      \item[\emph{(ii)}] $M \propto I$ and $G_{st} = 0$ for all $s, t \in S$
+      with $t \neq s^{\pm 1}$:
+      then $\rho(G) \cong Q_8$.
+
+      \item[\emph{(iii)}] $M \propto I$ and $G_{st} \notin \{0, \pm 1\}$ for some
+      $s, t \in S$:
+      then $\rho(G) \in \{2O,\, 2I\}$.
+    \end{enumerate}
+    Moreover, the binary tetrahedral group $2T$ (projective image $A_4$)
+    does not appear in any of the three cases.
+  \end{theorem}
+
+  \begin{proof}
+    \textbf{Mutual exclusivity.}
+    Cases~(i)--(iii) are mutually exclusive by definition: $M \not\propto I$ versus
+    $M \propto I$, then the Gram values.
+
+    \textbf{Exhaustiveness.}
+    Every finite group $G$ satisfying the hypotheses has $\rho(G)$ in the list
+    $\{\mathrm{Dic}_n, 2T, 2O, 2I\}$ by Step~2 \eqref{eq:step2}.
+    Proposition~\ref{prop:2T-excluded} excludes $2T$.
+    Proposition~\ref{prop:dic-anisotropy} shows $\mathrm{Dic}_n$ ($n \ge 3$) satisfies
+    $M \not\propto I$, hence falls in case~(i).
+    $Q_8 = \mathrm{Dic}_2$ has $M = 2I$ (the six traceless elements $\{\pm i, \pm j, \pm k\}$
+    span all three coordinate axes; see Remark~\ref{rem:Dic2-iso}) and all off-diagonal
+    Gram values in $\{0, -1\}$ (since $\{\pm i, \pm j, \pm k\}$ are pairwise orthogonal),
+    so it falls in case~(ii).
+    The remaining candidates $2O$ and $2I$ have $M \propto I$ (by the isotropy remark
+    below) and Gram values outside $\{0, \pm 1\}$, so they fall in case~(iii).
+
+    \textbf{Case~(i) conclusion.}
+    By Proposition~\ref{prop:dic-anisotropy}, $\mathrm{Dic}_n$ with $n \ge 3$ is the
+    unique possibility, and $\rhobar(\mathrm{Dic}_n) = D_n$.
+
+    \textbf{Case~(ii) conclusion.}
+    With $M \propto I$ and all off-diagonal Gram entries zero, the hypotheses of
+    Lemma~\ref{lem:orth-implies-Q8} are met, giving $\rho(G) \cong Q_8$.
+
+    \textbf{Case~(iii) conclusion.}
+    With $M \propto I$ and a non-trivial Gram value, $\rho(G)$ is neither $\mathrm{Dic}_n$
+    (excluded by isotropy and Proposition~\ref{prop:dic-anisotropy}), nor $Q_8$
+    (excluded by the non-trivial Gram value), nor $2T$
+    (excluded by Proposition~\ref{prop:2T-excluded}).
+    By~\eqref{eq:step2}, the only remaining possibilities are $2O$ and $2I$.
+    Both cases occur: taking $S$ to be the full set of traceless elements of $2O$
+    (resp.\ $2I$), which does form a symmetric neutral generating set for those groups,
+    one finds $M \propto I$ (see Remark~\ref{rem:isotropy}) and Gram values
+    $\cos(\pi/4), \cos(\pi/3)$ for $2O$ and
+    $\cos(\pi/5), \cos(\pi/3), \cos(2\pi/5)$ for $2I$.
+  \end{proof}
+
+  \begin{remark}[Isotropy of the full traceless sets for $2T$, $2O$, $2I$]
+    \label{rem:isotropy}
+    Let $H \in \{A_4, S_4, A_5\}$ act on $\R^3$ through its standard rotational
+    representation, and let $\mathcal{U} \subset S^2$ be any $H$-stable finite set of
+    unit axes.
+    Define $M_{\mathcal{U}} := \sum_{\vec{u} \in \mathcal{U}} \vec{u}\,\vec{u}^{\,T}$.
+    For any $h \in H$,
+    \[
+      h\,M_{\mathcal{U}}\,h^{-1}
+      \;=\; \sum_{\vec{u} \in \mathcal{U}} (h\vec{u})(h\vec{u})^T
+      \;=\; \sum_{\vec{u} \in \mathcal{U}} \vec{u}\,\vec{u}^{\,T}
+      \;=\; M_{\mathcal{U}},
+    \]
+    so $M_{\mathcal{U}}$ lies in the commutant of the $H$-representation on $\R^3$.
+    Since the standard rotational representations of $A_4$, $S_4$, and $A_5$ on $\R^3$
+    are irreducible, Schur's lemma forces $M_{\mathcal{U}} = c\,I$ for some scalar $c \ge 0$.
+
+    \emph{Irreducibility of the $A_4$-action.}
+    If a line $L \subset \R^3$ were $A_4$-invariant, it would be a common fixed axis for all
+    rotational symmetries of the tetrahedron; but the $3$-cycles of $A_4$ correspond to
+    rotations around four distinct axes sharing no common line.
+    Since the representation is orthogonal, an $A_4$-invariant plane would yield an
+    invariant line as its orthogonal complement; hence no invariant plane exists either.
+    The same argument applies to $S_4$ (cube/octahedron) and $A_5$ (icosahedron/dodecahedron).
+
+    In particular, the full traceless element sets of $2T$, $2O$, and $2I$ all have
+    isotropic second-moment tensor $M \propto I$, regardless of whether those sets
+    generate the full group or a proper subgroup.
+    For $2T$ specifically, the traceless elements generate only $Q_8 \subset 2T$;
+    isotropy $M \propto I$ still holds, but the generation hypothesis of
+    Theorem~\ref{thm:gram-rigidity} is not satisfied.
+    These are independent properties.
+  \end{remark}
+
+  \begin{remark}[Separating $2O$ from $2I$ within case~(iii)]
+    \label{rem:2O-vs-2I}
+    Theorem~\ref{thm:gram-rigidity} does not separate $2O$ from $2I$ within case~(iii).
+    The distinction is encoded in the actual values of $G_{st}$: for $2O$, the
+    non-trivial values are $\cos(\pi/4) = 1/\sqrt{2}$ and $\cos(\pi/3) = 1/2$
+    (octahedral angles); for $2I$, they are $\cos(\pi/5) = \phi/2$,
+    $\cos(\pi/3) = 1/2$, and $\cos(2\pi/5) = 1/(2\phi)$ (icosahedral angles,
+    $\phi = \frac{1+\sqrt{5}}{2}$).
+    This finer distinction is available from the character table but is not needed
+    for the main admissibility conclusion.
+  \end{remark}

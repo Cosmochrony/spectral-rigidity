@@ -1,0 +1,45 @@
+\section{Setup: neutral generators in $\SU(2)$}
+  \label{sec:setup}
+
+  Let $G$ be a finite group, $S = S^{-1} \subset G$ a symmetric generating set, and
+  $\rho\colon G \to \SU(2)$ an irreducible two-dimensional representation.
+  The \emph{neutrality condition} is
+  \begin{equation}
+    \chi_\rho(s) \;:=\; \Tr\,\rho(s) \;=\; 0
+    \qquad \forall\, s \in S.
+    \label{eq:neutrality}
+  \end{equation}
+  Write $S^+ \subset S$ for a fixed choice of one representative from each pair
+  $\{s, s^{-1}\}$.
+
+  \paragraph{Step-1 recalled.}
+    Since $\rho(s) \in \SU(2)$ is traceless, its characteristic polynomial is
+    $\lambda^2 + 1 = 0$, so $\rho(s)^2 = -I$.
+    Every traceless element of $\SU(2)$ can be written
+    \begin{equation}
+      \rho(s) \;=\; i\,(\vec{u}_s \cdot \vec{\sigma}),
+      \qquad \vec{u}_s \in S^2 \subset \R^3,
+      \label{eq:traceless-form}
+    \end{equation}
+    where $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ are the Pauli matrices and the
+    sign is fixed by $\rho(s)^2 = -I$.
+    (Replacing $\rho(s)$ by $-\rho(s)$ replaces $\vec{u}_s$ by $-\vec{u}_s$;
+    both choices yield the same half-turn in $\SO(3)$.)
+    Thus each $s \in S$ determines a unique axis $\pm\vec{u}_s \in \mathbb{RP}^2$.
+
+  \paragraph{Step-2 recalled.}
+    By~\eqref{eq:traceless-form}, every $\rho(s)$ has order~4 in $\SU(2)$, so its image
+    $\rhobar(s)$ in $\SO(3)$ is a half-turn.
+    The Klein classification of finite subgroups of $\SU(2)$ (see, e.g.,~\cite{Klein1876}) gives the complete list
+    \[
+      \Z_n,\quad \mathrm{Dic}_n\;(n \ge 1),\quad 2T,\quad 2O,\quad 2I,
+    \]
+    with projective images $\Z_n$, $D_n$, $A_4$, $S_4$, $A_5$ in $\SO(3)$ respectively.
+    Since the cyclic groups $\Z_n$ contain no element of order~4 for $n \le 2$, and no
+    traceless element at all for $n \ge 3$, the neutrality condition~\eqref{eq:neutrality}
+    reduces the candidates to
+    \begin{equation}
+      \rho(G) \;\in\; \bigl\{\mathrm{Dic}_n\;(n \ge 2),\; 2T,\; 2O,\; 2I\bigr\},
+      \qquad \mathrm{Dic}_2 \cong Q_8.
+      \label{eq:step2}
+    \end{equation}

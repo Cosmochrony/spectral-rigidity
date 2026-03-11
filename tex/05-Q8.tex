@@ -1,0 +1,66 @@
+\section{The orthogonal Gram lemma: $Q_8$}
+  \label{sec:Q8}
+
+  \begin{lemma}[Orthogonal Gram $\Rightarrow$ $Q_8$]
+    \label{lem:orth-implies-Q8}
+    Suppose $S = S^{-1}$ generates $G$, the neutrality condition~\eqref{eq:neutrality}
+    holds, $\rho$ is irreducible, and
+    \begin{equation}
+      G_{st} = 0
+      \qquad \forall\, s, t \in S \;\text{with}\; t \neq s^{\pm 1}.
+      \label{eq:orth-gram}
+    \end{equation}
+    Then $\rho(G) \cong Q_8$.
+  \end{lemma}
+
+  \begin{proof}
+    \textbf{Step~A (at most three distinct axis directions).}
+    Condition~\eqref{eq:orth-gram} says any two generators not in the same inverse pair
+    have $\vec{u}_s \perp \vec{u}_t$ in $\R^3$.
+    A set of mutually orthogonal unit vectors in $\R^3$ has at most three elements.
+    Denote the distinct axis directions $\vec{e}_1, \vec{e}_2, \vec{e}_3 \in S^2$
+    (at most three, not all need be present).
+
+    \textbf{Step~B (at least two distinct directions).}
+    If all generators share the same axis $\pm\vec{e}_1$, then
+    $\rho(G) \subset \{\pm I, \pm i\,\vec{e}_1 \cdot \vec{\sigma}\} \cong \Z_4$,
+    which is abelian, contradicting irreducibility of $\rho$.
+    Hence there are at least two distinct axis directions.
+
+    \textbf{Step~C (cross product generates the third direction).}
+    Let $\vec{e}_1, \vec{e}_2$ be two distinct orthogonal axis directions.
+    The product $\rho(s_1)\rho(s_2)$, where $\vec{u}_{s_1} = \vec{e}_1$
+    and $\vec{u}_{s_2} = \vec{e}_2$, is
+    \begin{align*}
+      \rho(s_1)\rho(s_2)
+      &= (i\,\vec{e}_1 \cdot \vec{\sigma})(i\,\vec{e}_2 \cdot \vec{\sigma})
+      \;=\; -(\vec{e}_1 \cdot \vec{e}_2)\,I - i(\vec{e}_1 \times \vec{e}_2) \cdot \vec{\sigma} \\
+      &= -i\,(\vec{e}_1 \times \vec{e}_2) \cdot \vec{\sigma},
+    \end{align*}
+    since $\vec{e}_1 \perp \vec{e}_2$.
+    This is traceless with axis $\vec{e}_3 := \vec{e}_1 \times \vec{e}_2$.
+    Hence the product $\rho(s_1 s_2)$ introduces the axis $\vec{e}_3$,
+    and the three directions $\{\vec{e}_1, \vec{e}_2, \vec{e}_3\}$ form a right-handed
+    orthonormal frame.
+
+    \textbf{Step~D (closure and identification).}
+    The set of eight elements
+    \[
+      \{\pm I,\;
+      \pm i\,\vec{e}_1 \cdot \vec{\sigma},\;
+      \pm i\,\vec{e}_2 \cdot \vec{\sigma},\;
+      \pm i\,\vec{e}_3 \cdot \vec{\sigma}\}
+    \]
+    is closed under multiplication by the Pauli product identity
+    (using $\vec{e}_a \times \vec{e}_b = \pm\vec{e}_c$ for the cyclic triples),
+    hence forms a subgroup of $\SU(2)$ isomorphic to $Q_8$.
+    Since all generators of $S$ belong to this set and $S$ generates $G$,
+    we have $\rho(G) \subset Q_8$; irreducibility forces $\rho(G) = Q_8$.
+  \end{proof}
+
+  \begin{remark}
+    The condition $t \neq s^{\pm 1}$ in~\eqref{eq:orth-gram} is necessary.
+    For any $s \in S$, we have $G_{s,s^{-1}} = \vec{u}_s \cdot (-\vec{u}_s) = -1$,
+    which belongs to $\{0, \pm 1\}$ but is not zero.
+    The lemma asserts that all \emph{off-diagonal} (non-inverse-pair) entries vanish.
+  \end{remark}

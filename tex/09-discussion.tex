@@ -1,0 +1,48 @@
+\section{Discussion}
+  \label{sec:discussion}
+
+  \paragraph{The conceptual content of the Gram identity.}
+    The proof of Theorem~\ref{thm:gram-rigidity} rests entirely on two character-theoretic
+    objects: $M = \sum \vec{u}_s\vec{u}_s^T$ and $(G_{st})$.
+    Both are computable from the character table of $G$ and the representation $\rho$,
+    with no geometric input.
+    The Gram identity $G_{st} = -\tfrac{1}{2}\chi_\rho(st)$ is the key step:
+    it shows that the pairwise \emph{angles} between neutral axes are encoded in the
+    \emph{characters of pairwise products}.
+    Geometry emerges from spectral arithmetic.
+
+  \paragraph{Character-theoretic reconstruction of the Klein list.}
+    The Klein classification of finite subgroups of $\SU(2)$ is classically proved
+    by polyhedral geometry or by Dynkin diagram methods.
+    The present paper gives a \emph{character-theoretic} proof of the same classification,
+    restricted to the neutral sector.
+    The three regimes of Theorem~\ref{thm:gram-rigidity} correspond to:
+    \begin{itemize}
+      \item an \emph{anisotropy} discriminant ($M \propto I$ or not), detecting the
+      presence of a preferred rotation axis;
+      \item an \emph{orthogonality} discriminant ($G_{st} = 0$ or not), detecting
+      the purely quaternionic geometry;
+      \item a \emph{non-triviality} discriminant ($G_{st} \in \{0,\pm 1\}$ or not),
+      detecting the polyhedral (octahedral or icosahedral) geometry.
+    \end{itemize}
+    Each discriminant is a statement about eigenvalues of products of group elements,
+    hence a purely spectral condition.
+
+  \paragraph{Connection to the Admissibility Programme.}
+    In the \textsc{Cosmochrony} framework, the generator set $S$ models the flux-carrying
+    modes of the substrate operator $\mathcal{L}_\chi$, and the neutrality condition
+    $\chi_\rho(s) = 0$ encodes compatibility with the bounded-flux constraint $\|c_\chi\| \le 1$
+    (Steps~1--2).
+    The present result shows that this constraint is powerful enough to recover the
+    full polyhedral structure of $\SU(2)$: the admissible groups~\eqref{eq:admissible-list}
+    are exactly those whose character geometry is consistent with isotropy or
+    orthogonality of the axis configuration.
+
+  \paragraph{Structural role of $2T$.}
+    The exclusion of $2T$ is not an accident of numerics but a structural consequence of
+    the coset decomposition: the tetrahedral group's neutral sector is entirely contained
+    in $Q_8$, making it impossible for any neutral generating set to witness the full $A_4$
+    symmetry.
+    This asymmetry between $2T$ and the binary octahedral/icosahedral groups $2O$, $2I$
+    reflects a deeper distinction: for $2O$ and $2I$, the full set of traceless elements
+    \emph{is} a neutral generating set for the group, while for $2T$ it is not.

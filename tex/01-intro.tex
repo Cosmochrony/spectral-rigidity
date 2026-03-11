@@ -1,0 +1,48 @@
+\section{Introduction}
+  \label{sec:intro}
+
+  The Admissibility Sub-Programme of \textsc{Cosmochrony} asks which spectra of the
+  relational operator $\mathcal{L}_\chi$ are compatible with the bounded-flux evolution
+  constraint $\|c_\chi\| \le 1$.
+  The programme proceeds in three steps.
+  \begin{itemize}
+    \item \textbf{Step~1} (\emph{SpectralAdmissibility~1.0}):
+    generators satisfying the neutrality condition $\chi_\rho(s) = 0$ correspond
+    to traceless elements of $\SU(2)$, i.e.\ to half-turns.
+    \item \textbf{Step~2} (\emph{SpectralCapacity~1.0}):
+    the Klein classification of finite subgroups of $\SU(2)$ restricts the
+    possible groups $\rho(G)$ to
+    $\{\mathrm{Dic}_n\,(n \ge 2),\; 2T,\; 2O,\; 2I\}$.
+    \item \textbf{Step~3} (\emph{this paper}):
+    pairwise character geometry distinguishes the cases analytically and
+    establishes which groups actually arise.
+  \end{itemize}
+
+  The key difficulty left open after Step~2 is that the Klein classification is
+  typically proved by geometric or group-theoretic means, neither of which refers
+  to the spectral constraint.
+  The main contribution of the present paper is to show that the full classification
+  \emph{follows} from two character-theoretic invariants:
+  the second-moment tensor $M$ and the Gram matrix $G_{st}$.
+  No geometric input beyond neutrality is needed.
+
+  \paragraph{Main result (informal).}
+    The finite subgroups of $\SU(2)$ admissible under spectral neutrality are exactly
+    \[
+      Q_8,\quad \mathrm{Dic}_n\;(n \ge 3),\quad 2O,\quad 2I.
+    \]
+    The binary tetrahedral group $2T$ is \emph{structurally excluded}: the full set of
+    its traceless elements generates only $Q_8$, not $2T$.
+    The three remaining cases are separated by whether $M \propto I$ (isotropy)
+    and by whether the Gram matrix contains values outside $\{0, \pm 1\}$.
+
+  \paragraph{Organisation.}
+    Section~\ref{sec:setup} recalls the setup and the results of Steps~1--2.
+    Section~\ref{sec:gram} establishes the Gram identity $G_{st} = -\tfrac{1}{2}\chi_\rho(st)$.
+    Section~\ref{sec:M} analyses the second-moment tensor and proves that
+    $\mathrm{Dic}_n$ is anisotropic for $n \ge 3$.
+    Section~\ref{sec:Q8} proves that an orthogonal Gram pattern forces $\rho(G) \cong Q_8$.
+    Section~\ref{sec:2T} proves the structural exclusion of $2T$.
+    Section~\ref{sec:theorem} assembles the main classification theorem.
+    Section~\ref{sec:klein} discusses completeness via the Klein list.
+    Section~\ref{sec:discussion} draws the conceptual conclusions.

@@ -1,0 +1,43 @@
+\section{Structural exclusion of $2T$}
+  \label{sec:2T}
+
+  \begin{proposition}[Exclusion of $2T$]
+    \label{prop:2T-excluded}
+    The binary tetrahedral group $2T$ admits no symmetric neutral generating set.
+    Consequently, $A_4$ cannot appear as the projective image $\rhobar(G)$
+    of any neutral generating set in an irreducible $2$-dimensional representation.
+  \end{proposition}
+
+  \begin{proof}
+    The group $2T$ has order~24 and decomposes as
+    \begin{align}
+      \text{Coset~1 (}Q_8\text{):}\quad
+      &\{\pm 1,\; \pm i,\; \pm j,\; \pm k\},
+      \label{eq:2T-Q8} \\
+      \text{Coset~2:}\quad
+      &\left\{\tfrac{\pm 1 \pm i \pm j \pm k}{2}\right\}
+      \quad \text{(all $16$ sign combinations)}.
+      \label{eq:2T-coset2}
+    \end{align}
+    In the spin-$\tfrac{1}{2}$ representation, the character of a quaternion
+    $q = a + bi + cj + dk$ is $\chi(q) = \Tr(\rho(q)) = 2a$.
+    Hence $\chi(q) = 0$ if and only if $a = 0$.
+    Among elements of Coset~1, $a = 0$ only for $\{\pm i, \pm j, \pm k\}$
+    (since $\pm 1$ have $a = \pm 1$).
+    Every element of Coset~2 has $|a| = \tfrac{1}{2} \neq 0$.
+
+    Therefore the set of all traceless elements of $2T$ is exactly
+    $T_0 := \{\pm i, \pm j, \pm k\} = Q_8 \setminus \{\pm 1\}$.
+    This set generates $Q_8$ (order~8), not $2T$ (order~24).
+    Any symmetric neutral generating set for $2T$ must consist of traceless
+    elements, hence $\langle S \rangle \subset \langle T_0 \rangle = Q_8 \subsetneq 2T$,
+    so $S$ cannot generate $2T$.
+  \end{proof}
+
+  \begin{remark}
+    The exclusion of $2T$ is a structural consequence of the quaternionic
+    coset decomposition: the non-identity elements of the cyclic part $\langle a \rangle$
+    in $\mathrm{Dic}_n$ (for $n \ge 2$) are traceless only at specific orders, but
+    in $2T$ the entire second coset has $|a| = 1/2$, placing it irreversibly outside
+    the neutral sector.
+  \end{remark}

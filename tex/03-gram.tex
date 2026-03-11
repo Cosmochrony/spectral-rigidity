@@ -1,0 +1,45 @@
+\section{Pairwise character geometry: the Gram identity}
+  \label{sec:gram}
+
+  \begin{lemma}[Gram identity]
+    \label{lem:gram-identity}
+    For any $s, t \in S$, let $G_{st} := \vec{u}_s \cdot \vec{u}_t$ be the Euclidean
+    dot product of the corresponding unit axes in $\R^3$.
+    Then
+    \begin{equation}
+      G_{st} \;=\; -\tfrac{1}{2}\,\chi_\rho(st).
+      \label{eq:gram-identity}
+    \end{equation}
+  \end{lemma}
+
+  \begin{proof}
+    Using the Pauli product identity
+    $({\vec{u}} \cdot \vec{\sigma})({\vec{v}} \cdot \vec{\sigma})
+    = (\vec{u} \cdot \vec{v})\,I + i\,(\vec{u} \times \vec{v}) \cdot \vec{\sigma}$,
+    we compute
+    \begin{align*}
+      \rho(s)\,\rho(t)
+      &= \bigl(i\,\vec{u}_s \cdot \vec{\sigma}\bigr)
+      \bigl(i\,\vec{u}_t \cdot \vec{\sigma}\bigr)
+      \;=\; -\bigl(\vec{u}_s \cdot \vec{\sigma}\bigr)
+      \bigl(\vec{u}_t \cdot \vec{\sigma}\bigr) \\
+      &= -(\vec{u}_s \cdot \vec{u}_t)\,I
+      \;-\; i\,(\vec{u}_s \times \vec{u}_t) \cdot \vec{\sigma}.
+    \end{align*}
+    Taking the trace and using $\Tr(\vec{w} \cdot \vec{\sigma}) = 0$:
+    \[
+      \chi_\rho(st)
+      \;=\; \Tr\bigl(\rho(s)\rho(t)\bigr)
+      \;=\; -2\,G_{st}.
+      \qedhere
+    \]
+  \end{proof}
+
+  \begin{remark}
+    Lemma~\ref{lem:gram-identity} is the conceptual core of the paper.
+    It shows that the \emph{entire axis geometry} --- the pairwise angles between
+    neutral generators in $S^2$ --- is readable directly from the character table:
+    $G_{st}$ is computable from $\chi_\rho$ alone, without any geometric input.
+    In particular, the Gram matrix $(G_{st})_{s,t \in S}$ is an intrinsic spectral
+    invariant of the representation~$\rho$.
+  \end{remark}
