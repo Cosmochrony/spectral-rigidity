@@ -1,5 +1,5 @@
 This repository contains the source of the **Spectral Gram Rigidity** Cosmochrony paper  
-[*Spectral Gram Rigidity and Structural Selection among Finite SU(2) Subgroups*](out/SpectralGramRigidity.pdf).
+*Spectral Gram Rigidity and Structural Selection among Finite SU(2) Subgroups*.
 
 This work constitutes **Step C of the spectral admissibility programme**.  
 It establishes a structural rigidity theorem showing that the geometry of
