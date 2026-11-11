@@ -4,5 +4,5 @@
   "main_tex": "tex/SpectralGramRigidity.tex",
   "zenodo_id": 18969867,
   "doi": "10.5281/zenodo.18969867",
-  "version": "1.15.1"
+  "notes": "Version 1.16 corrects one paragraph of the discussion. It had stated that the classification of Theorem 7.1 is derived under the Born–Infeld admissibility bound and is made universally rigid within the framework by the no-scale note. The theorem's hypotheses (a finite group, a symmetric generating set, an irreducible representation into SU(2) with traceless generators) contain no admissibility bound and no dimensional parameter, so the classification is scale-free and needs no stability statement; the no-scale Level 1 theorem is moreover withdrawn in version 2.0 of that note. Both statements are removed. The theorem and its proof are unchanged."
 }
